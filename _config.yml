@@ -227,13 +227,13 @@ sass:
 
 
 # Outputting
-# permalink: /:categories/:title/
-# timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink: /:categories/:title/
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Pagination with jekyll-paginate
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
 
 # Pagination with jekyll-paginate-v2
 # See https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
@@ -340,6 +340,7 @@ defaults:
       layout: single
       author_profile: false
       share: true
+      comment: true
   # _portfolio
   - scope:
       path: ""
