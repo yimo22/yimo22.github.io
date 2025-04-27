@@ -313,7 +313,7 @@ compress_html:
 # Collections
 collections:
   it:
-    ouput: true
+    output: true
     permalink: /:collection/:path
 
 
