@@ -310,6 +310,12 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  it:
+    ouput: true
+    permalink: /:collection/:path
+
 
 # Defaults
 defaults:
@@ -324,3 +330,12 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _it
+  - scope: 
+      path: ""
+      type: it
+    values:
+      layout: single
+      author_profile: false
+      share: true
+     
