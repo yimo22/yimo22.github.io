@@ -312,12 +312,12 @@ compress_html:
 
 # Collections
 collections:
-  - it:
-      output: true
-      permalink: /:collection/:path/
-  - portfolio:
-      output: true
-      permalink: /:collection/:path/
+  it:
+    output: true
+    permalink: /:collection/:path
+  portfolio:
+    output: true
+    permalink: /:collection/:path
 
 # Defaults
 defaults:
