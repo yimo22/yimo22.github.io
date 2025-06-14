@@ -3,7 +3,7 @@ repository: yimo22/yimo22.github.io
 # favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
 
 # Content configuration version
-version: 1
+version: 2
 
 # Personal info
 name: yimo22
@@ -16,7 +16,7 @@ email: yimo22@naver.com
 # website_title: Web (Website title override)
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: never
 
 # Social links
 # twitter_username: jekyllrb
