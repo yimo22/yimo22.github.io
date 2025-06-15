@@ -127,12 +127,12 @@ content:
     content:
       - layout: top-right
         title: Samsung Software Academy For Youth
-        sub_title: 삼성청년소프트웨어 아카데미
+        sub_title: 삼성청년소프트웨어 아카데미, 9기 Java 전공
         caption: 2023 - 2023
         # quote: >
         #   ''
-        description: | # this will include new lines to allow paragraphs
-          9기 Java 전공 수료 
+        # description: | # this will include new lines to allow paragraphs
+        #   9기 Java 전공 수료 
 
       - layout: top-right
         title: Computer Science & Engineering
