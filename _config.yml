@@ -6,8 +6,8 @@ repository: yimo22/yimo22.github.io
 version: 2
 
 # Personal info
-name: yimo22
-title: Resume
+name: Yeongdo KIM
+title: SW Engineer
 email: yimo22@naver.com
 # email_title: Email (Email title override)
 # phone: Your phone number (optional)
@@ -53,11 +53,11 @@ linkedin_username: yimo22
 about_profile_image: Directory of profile image (eg. images/profile.jpg)
 about_content: | # this will include new lines to allow paragraphs
   
-  개발은 마라톤과 같다고 생각합니다. 중간에 포기하면 뒤쳐지지만 옆의 동료들과 함께 꾸준히 달린다면 완주를 할 수 있는 마라톤처럼, 개발도 끊임없이 달리면서 옆의 동료들과 전진해야 한다고 생각합니다. "성장을 위한 가장 확실한 방법은 뛰어난 동료들 사이에서 있는것이다.” 라는 말처럼 주변의 뛰어난 동료들과 같이 성장하고 발전하고 싶습니다. 그리고 반복되고 중복되는 비효율적인 작업들을 자동화하고 최적화하는, 개선하는 일을 좋아하며 사건이 발생한 원인을 파악하고 해결하는 것을 지향합니다. 프로젝트의 종료 이후에도 지속적으로 코드리뷰와 디버깅을 통해서 프로젝트를 운영한 경험이 있습니다.
+  개발은 마라톤과 같다고 생각합니다. 중간에 포기하면 뒤쳐지지만 옆의 동료들과 함께 꾸준히 달린다면 완주를 할 수 있는 마라톤처럼, 개발도 끊임없이 달리면서 옆의 동료들과 전진해야 한다고 생각합니다. 
+  
+  "성장을 위한 가장 확실한 방법은 뛰어난 동료들 사이에서 있는것이다.” 라는 말처럼 주변의 뛰어난 동료들과 같이 성장하고 발전하고 싶습니다. 그리고 <mark>반복되고 중복되는 비효율적인 작업들을 자동화하고 최적화</mark>하는, 개선하는 일을 좋아하며 사건이 발생한 원인을 파악하고 해결하는 것을 지향합니다. 
 
-  반복되고 중복되는 비효율적인 작업들을 자동화하고 최적화하는, 개선하는 일을 좋아하며 사건이 발생한 원인을 파악하고 해결하는 것을 지향합니다. 
-
-  Java & Spring 기반의 프로젝트들을 기반으로, 현재 C# ASP.NET SW엔지니어로 활동하고 있습니다. 
+  Java & Spring 기반의 프로젝트들을 경험으로, 현재 C# ASP.NET SW엔지니어로 활동하고 있습니다. 
 # You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
 #   - Lists
 #   - Tables
@@ -77,6 +77,30 @@ content:
           현대자동차그룹웨 ICT 전문 계열사 (연매출 약 3조)
         description: | # this will include new lines to allow paragraphs
           - 그룹웨어 (포탈, 결재) 개발/운영 담당
+
+  - title: Skill
+    layout: list
+    content: 
+      - layout: left
+        title: Backend 
+        description: |
+          - Java, C# 
+          - Spring Boot, Spring MVC, Spring Cloud, Spring Data JPA
+          - ASP .NET, Sharepoint
+          - Gradle, Maven
+          - IntelliJ, Visual Studio
+      - layout: left
+        title: Frontend
+        description: |
+          - HTML, Javascript
+          - Vue.js (Vue3), Vuex
+      - layout: left
+        title: Devops
+        description: |
+          - Mysql, MariaDB, MSSQL
+          - Jenkins
+          - AWS EC2
+          - Nginx, IIS
 
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
@@ -103,27 +127,28 @@ content:
     content:
       - layout: top-right
         title: Samsung Software Academy For Youth
-        sub_title: 삼성청년소프트웨어 아카데미 9기
+        sub_title: 삼성청년소프트웨어 아카데미
         caption: 2023 - 2023
-        quote: >
-          ''
+        # quote: >
+        #   ''
         description: | # this will include new lines to allow paragraphs
-          9기 Java 전공 
+          9기 Java 전공 수료 
 
       - layout: top-right
         title: Computer Science & Engineering
         sub_title: Barchelor of Science in Computer Science and Engineering
         caption: 2017 - 2023
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+        # quote: >
+        #   Short institution or course description (optional)
+        # description: | # this will include new lines to allow paragraphs
+        #   Description of qualification
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+  # - title: A Little More About Me
+  #   layout: text
+  #   content: | # this will include new lines to allow paragraphs
+  #     This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+
+  #     Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
 
 # Footer
 footer_show_references: true
