@@ -6,7 +6,7 @@ repository: yimo22/yimo22.github.io
 version: 2
 
 # Personal info
-name: Yeongdo KIM
+name: 김영도
 title: SW Engineer
 email: yimo22@naver.com
 # email_title: Email (Email title override)
@@ -76,7 +76,7 @@ content:
         quote: >
           현대자동차그룹웨 ICT 전문 계열사 (연매출 약 3조)
         description: | # this will include new lines to allow paragraphs
-          - 그룹웨어 (포탈, 결재) 개발/운영 담당
+          - 그룹웨어시스템 개발/운영 
 
   - title: Skill
     layout: list
