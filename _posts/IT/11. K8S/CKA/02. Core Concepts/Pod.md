@@ -1,0 +1,87 @@
+---
+aliases: 
+tags:
+---
+# About
+
+애플리케이션의 기본 단위를 파드(Pod) 라고 부르며, 파드는 1개 이상의 컨테이너로 구성된 컨테이너 집합이다. 즉, K8s에서 관리하는 최소한의 단위를 파드라고 부른다.
+
+각 파드 1개당, `Pause 컨테이너` 가 1개씩 포함된다. 
+# Sidecar 
+
+파드에 정의된 부가적인 컨테이너를 사이드카(Sidecar) 컨테이너 라고 한다. 
+
+사이드카 컨테이너는 파드 내의 다른 컨테이너와 네트워크 환경 등을 공유하게 된다. 때문에 파드에 포함된 컨테이너들은 모두 같은 워커노드에서 함께 실행된다. 
+
+> 파드의 네트워크 네임스페이스는 `Pause` 라는 이름의 컨테이너로부터 네트워크를 공유받아 사용한다. 
+> Pause 컨테이너는 네임스페이스를 공유하기 위해 파드별로 생성되는 컨테이너이며, `Pause` 컨테이너는 각 파드에 대해 자동으로 생성된다. 
+
+### examples
+
+``` yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mc-pod
+  namespace: mc-namespace
+spec:
+  containers:
+    - name: mc-pod-1
+      image: nginx:1-alpine
+      env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+    - name: mc-pod-2
+      image: busybox:1
+      volumeMounts:
+        - name: shared-volume
+          mountPath: /var/log/shared
+      command:
+        - "sh"
+        - "-c"
+        - "while true; do date >> /var/log/shared/date.log; sleep 1; done"
+    - name: mc-pod-3
+      image: busybox:1
+      command:
+        - "sh"
+        - "-c"
+        - "tail -f /var/log/shared/date.log"
+      volumeMounts:
+        - name: shared-volume
+          mountPath: /var/log/shared
+  volumes:
+    - name: shared-volume
+      emptyDir: {}
+```
+
+
+# Static Pods
+
+Kubelet에 의하여 자동으로 실행/관리되는 pods들을 의미한다. `/etc/kubernetes/manifests/*.yaml` 의 파일들이 static pods들에 해당한다. 
+
+## Process
+1. [[Kubelet]] 이 `/etc/kubernetes/manifests/` 디렉터리를 주기적으로 감시
+2. YAML 파일이 있으면 혼자서 Pods 객체를 만들고 실행
+   이 파드는 API 서버에 등록만 되고, 원래는 존재하지 않던 Pods 이다.
+
+
+# Daemonsets
+
+각 노드들마다의 실행성을 보장하는 Object
+
+## Process
+
+1. API 서버가 요청을 받음
+2. DaemonSet Controller 가 감지
+3. 각 노드에 Pod 객체를 생성
+4. 스케줄러는 관여하지 않음 (DaemonSet은 자체적으로 노드를 선택)
+5. 해당 노드의 kubelet 이 해당 파드를 받아서 실행 
+
+
+
+
+
+
+[official ref](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)
