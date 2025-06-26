@@ -1,7 +1,6 @@
 ---
 aliases: 
-tags: 
-namespaced: true
+tags:
 ---
 # About
 
